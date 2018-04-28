@@ -1,16 +1,5 @@
-# Build/Dependencies
-node_modules
-dist
-.awcache
-/config/project.json
-
-# OS Specific Files
-.DS_Store
-
-# Editor Configs
-.idea
-.vscode
-*.iml
+# https://github.com/github/gitignore/blob/master/Node.gitignore #
+##################################################################
 
 # Logs
 logs
@@ -43,14 +32,14 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -71,11 +60,6 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next
-
-# rollup-plugin-typescript2 cache
-.rpt2_cache/
-
-# NPM Lockfiles
-package-lock.json
+# Custom
+.idea
+dist
