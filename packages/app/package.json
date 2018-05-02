@@ -2,7 +2,15 @@
   "name": "@lims.io/app",
   "version": "0.1.0",
   "description": "The primary entrypoint to the LIMS SDK",
-  "private": true,
+  "author": "LIMS <support@lims.io> (https://lims.io)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lims-io/lims-sdk-js/tree/master/packages/app"
+  },
+  "bugs": {
+    "url": "https://github.com/lims-io/lims-sdk-js/issues"
+  },
   "module": "dist/index.esm.js",
   "main": "dist/index.cjs.js",
   "engines": {

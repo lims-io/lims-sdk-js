@@ -1,12 +1,12 @@
 {
-  "name": "@lims.io/auth",
+  "name": "@lims.io/api",
   "version": "0.1.0",
-  "description": "Javascript library for LIMS Auth SDK",
+  "description": "Javascript library for LIMS API SDK",
   "author": "LIMS <support@lims.io> (https://lims.io)",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lims-io/lims-sdk-js/tree/master/packages/auth"
+    "url": "https://github.com/lims-io/lims-sdk-js/tree/master/packages/api"
   },
   "bugs": {
     "url": "https://github.com/lims-io/lims-sdk-js/issues"
