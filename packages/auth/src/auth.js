@@ -1,4 +1,4 @@
-import {authToken} from "token/auth-token";
+import {authToken} from "./token/auth-token";
 
 class Auth {
 

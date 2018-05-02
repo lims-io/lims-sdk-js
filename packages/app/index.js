@@ -1,1 +1,3 @@
-// module.exports = require('./dist/app');
+import app  from './src/app';
+
+export default app;

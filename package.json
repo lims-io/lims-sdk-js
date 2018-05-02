@@ -1,5 +1,5 @@
 {
-  "name": "lims-apps-sdk-js-wrapper",
+  "name": "lims-sdk-js-wrapper",
   "version": "0.1.0",
   "description": "Monorepo for the LIMS JavaScript SDK",
   "private": true,

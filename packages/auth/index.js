@@ -1,1 +1,3 @@
-module.exports = require('./dist/index');
+import auth  from './src/auth';
+
+export default auth;

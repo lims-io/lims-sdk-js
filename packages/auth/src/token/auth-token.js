@@ -1,7 +1,7 @@
 // JSON Web Token
 import jwt from "jsonwebtoken";
 // Encoding
-import {decode} from "encoding/base64";
+import {decode} from "../encoding/base64";
 
 const expiresIn = '1y';
 

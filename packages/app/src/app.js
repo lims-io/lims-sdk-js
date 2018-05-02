@@ -1,7 +1,6 @@
 import Auth from "@lims.io/auth";
 
 class App {
-
     constructor(credentials) {
         this.modules = {
             auth: new Auth(credentials)
