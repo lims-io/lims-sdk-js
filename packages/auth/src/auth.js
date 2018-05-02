@@ -1,9 +1,11 @@
+import Api from "@lims.io/api";
 import {authToken} from "./token/auth-token";
 
 class Auth {
 
     constructor(credentials) {
         this.credentials = credentials;
+        this.api = new Api(credentials);
     }
 
     userToken (user) {
