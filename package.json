@@ -8,7 +8,8 @@
     "yarn": ">=1.0.0"
   },
   "scripts": {
-    "dev": "lerna run --parallel --scope @lims.io/* dev"
+    "dev": "lerna run --parallel --scope @lims.io/* dev",
+    "prepare": "lerna run --scope @lims.io/* prepare"
   },
   "workspaces": [
     "packages/*"

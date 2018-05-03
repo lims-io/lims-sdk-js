@@ -1,11 +1,11 @@
 import Api from "@lims.io/api";
-import {authToken} from "./token/auth-token";
+import {authToken} from "token/auth-token";
 
 class Auth {
 
-    constructor(credentials) {
+    constructor(credentials, options) {
         this.credentials = credentials;
-        this.api = new Api(credentials);
+        this.api = new Api(credentials, options);
     }
 
     userToken (user) {
@@ -15,6 +15,10 @@ class Auth {
 
     adminToken(admin, privateKey) {
         return authToken(admin, null, privateKey);
+    }
+
+    async createAdmin({displayName, email}) {
+        return this.api.admin.create({displayName, email});
     }
 }
 

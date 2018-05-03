@@ -1,16 +1,10 @@
-import Api from "@lims.io/api";
 import Auth from "@lims.io/auth";
 
 class App {
-    constructor(credentials) {
+    constructor(credentials, options) {
         this.modules = {
-            api: new Api(credentials),
-            auth: new Auth(credentials)
+            auth: new Auth(credentials, options)
         }
-    }
-
-    get api() {
-        return this.modules.api;
     }
 
     get auth() {
@@ -18,6 +12,10 @@ class App {
     }
 }
 
-export default (credentials) => {
-    return new App(credentials);
+export default (credentials, options) => {
+    return new App(credentials, {
+        url: 'https://api.lims.io/rest/v1',
+        ssl: true,
+        ...options
+    });
 };
