@@ -16,6 +16,7 @@ export default (credentials, options) => {
     return new App(credentials, {
         url: 'https://api.lims.io/rest/v1',
         ssl: true,
+        tokenExpiration: '1m',
         ...options
     });
 };

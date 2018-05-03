@@ -3,9 +3,10 @@ import jwt from "jsonwebtoken";
 // Encoding
 import {decode} from "encoding/base64";
 
-const expiresIn = '1y';
-
-const generate = ({issuer, subject, privateKey}) => {
+/**
+ * Generates JWT Token
+ */
+const generate = ({issuer, subject, privateKey, expiresIn}) => {
     const options = {
         issuer,
         expiresIn,
@@ -19,4 +20,9 @@ const generate = ({issuer, subject, privateKey}) => {
     return jwt.sign({}, decode(privateKey), options);
 };
 
-export const authToken = (integration, user, privateKey) => generate({issuer: integration, subject: user, privateKey});
+/**
+ * Generates auth token
+ */
+export const authToken = (integration, user, privateKey, expiresIn) => generate({
+    issuer: integration, subject: user, privateKey, expiresIn
+});

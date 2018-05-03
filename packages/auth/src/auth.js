@@ -5,20 +5,26 @@ class Auth {
 
     constructor(credentials, options) {
         this.credentials = credentials;
-        this.api = new Api(credentials, options);
+        this.options = options;
+
+        this.modules = {
+            api: new Api(credentials, options)
+        }
     }
 
     userToken (user) {
         const {uid, privateKey} = this.credentials;
-        return authToken(uid, user, privateKey);
+        const {tokenExpiration} = this.options;
+        return authToken(uid, user, privateKey, tokenExpiration);
     }
 
     adminToken(admin, privateKey) {
-        return authToken(admin, null, privateKey);
+        const {tokenExpiration} = this.options;
+        return authToken(admin, null, privateKey, tokenExpiration);
     }
 
     async createAdmin({displayName, email}) {
-        return this.api.admin.create({displayName, email});
+        return this.modules.api.admin.create({displayName, email});
     }
 }
 
