@@ -11,6 +11,13 @@
   "bugs": {
     "url": "https://github.com/lims-io/lims-sdk-js/issues"
   },
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "module": "dist/index.esm.js",
   "main": "dist/index.cjs.js",
   "engines": {
